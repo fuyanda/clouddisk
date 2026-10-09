@@ -52,7 +52,22 @@ Windows 上打 MSI：`gradlew.bat :composeApp:packageMsi`。
 产物位置：
 
 - DMG：`composeApp/build/compose/binaries/main/dmg/`
+- MSI：`composeApp/build/compose/binaries/main/msi/`
+- Deb：`composeApp/build/compose/binaries/main/deb/`
 - APK：`composeApp/build/outputs/apk/`
+
+## CI（GitHub Actions）
+
+推送到 `main` 或在 Actions 页手动触发 `Desktop packages`，会并行构建：
+
+| Artifact | 内容 |
+| --- | --- |
+| `CloudDisk-windows-msi` | Windows MSI |
+| `CloudDisk-linux-deb` | Linux Deb |
+| `CloudDisk-macos-dmg` | macOS DMG |
+| `CloudDisk-android-debug-apk` | Android debug APK |
+
+在仓库 **Actions** → 选中成功的 run → **Artifacts** 下载。CI 里只打 debug APK，正式签名包仍在本机用 `keystore.properties` 构建。
 
 ## 桌面视频预览
 
