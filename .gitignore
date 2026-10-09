@@ -1,0 +1,25 @@
+# Gradle
+.gradle/
+build/
+**/build/
+.kotlin/
+
+# Android 本机 SDK 路径
+local.properties
+
+# 签名密钥与口令
+keystore.properties
+*.keystore
+*.jks
+
+# IDE
+.idea/
+.vscode/
+*.iml
+captures/
+
+# 系统与日志
+.DS_Store
+*.log
+hs_err_pid*
+replay_pid*
