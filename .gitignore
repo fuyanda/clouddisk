@@ -1,0 +1,30 @@
+# Gradle / Kotlin 构建产物
+.gradle/
+build/
+**/build/
+.kotlin/
+*.log
+
+# Android 本地配置与原生构建缓存
+local.properties
+captures/
+.externalNativeBuild/
+.cxx/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 签名密钥与口令，禁止入库
+keystore.properties
+*.keystore
+*.jks
+
+# JVM 崩溃转储
+hs_err_pid*
+replay_pid*
